@@ -232,7 +232,7 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 140px) {
+@media screen and (min-width: 1440px) {
   body {
     background: var(--Very-Light-blue, #ecf2ff);
     align-items: center;
