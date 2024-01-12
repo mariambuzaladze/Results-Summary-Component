@@ -1,8 +1,14 @@
+body {
+  min-height: 100vh;
+  font-family: Hanken Grotesk;
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   width: 375px;
-  height: 809px;
 }
 
 .result {
@@ -18,26 +24,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .your_result {
   color: var(--Light-Blue, #cac9ff);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Hanken Grotesk;
   font-size: 18px;
   font-weight: 700;
-
-  margin: 24px 0;
 }
 
 .oval {
   width: 140px;
   height: 140px;
   border-radius: 100px;
-  background-color: #2521c9;
-
-  margin: 24px 0;
+  background: var(
+    --Gradient-2,
+    linear-gradient(
+      180deg,
+      #4d21c9 0%,
+      rgba(37, 33, 201, 0) 100%,
+      rgba(37, 33, 201, 0) 100%
+    )
+  );
 
   display: flex;
   flex-direction: column;
@@ -47,7 +55,6 @@
 
 .some {
   color: var(--White, #fff);
-  font-family: Hanken Grotesk;
   font-size: 56px;
   font-weight: 800;
   line-height: 72px;
@@ -55,14 +62,12 @@
 
 .all {
   color: var(--Light-Blue, #cac9ff);
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 700;
 }
 
 h2 {
   color: var(--White, #fff);
-  font-family: Hanken Grotesk;
   font-size: 24px;
   font-weight: 700;
 }
@@ -71,18 +76,11 @@ h2 {
   width: 260px;
   color: var(--Light-Blue, #cac9ff);
   text-align: center;
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 500;
-
-  margin-top: 8px;
-  margin-bottom: 40px;
 }
 
 .summary {
-  width: 375px;
-  height: 809px;
-
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -91,7 +89,6 @@ h2 {
 
 .title {
   color: var(--Dark-Navy, #303b59);
-  font-family: Hanken Grotesk;
   font-size: 18px;
   font-weight: 700;
 }
@@ -102,8 +99,21 @@ h2 {
   gap: 16px;
 }
 
+.left {
+  display: flex;
+  gap: 12px;
+}
+
+.right {
+  display: flex;
+  gap: 8px;
+
+  color: var(--Dark-Navy, #303b59);
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .reaction {
-  width: 315px;
   border-radius: 12px;
   background: var(
     --red-95-white,
@@ -120,11 +130,6 @@ h2 {
   padding: 16px;
 }
 
-.reaction_left {
-  display: flex;
-  gap: 12px;
-}
-
 .lightning {
   width: 20px;
   height: 20px;
@@ -132,19 +137,8 @@ h2 {
 
 .text_reaction {
   color: var(--Red, #f55);
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 500;
-}
-
-.reaction_right {
-  display: flex;
-  gap: 8px;
-
-  color: var(--Dark-Navy, #303b59);
-  font-family: Hanken Grotesk;
-  font-size: 16px;
-  font-weight: 700;
 }
 
 .number100 {
@@ -152,7 +146,6 @@ h2 {
 }
 
 .memory {
-  width: 315px;
   border-radius: 12px;
   background: var(
     --yellow-95-white,
@@ -169,30 +162,13 @@ h2 {
   padding: 16px;
 }
 
-.memory_left {
-  display: flex;
-  gap: 12px;
-}
-
 .text_memory {
   color: var(--Yellow, #ffb21e);
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 500;
 }
 
-.memory_right {
-  display: flex;
-  gap: 8px;
-
-  color: var(--Dark-Navy, #303b59);
-  font-family: Hanken Grotesk;
-  font-size: 16px;
-  font-weight: 700;
-}
-
 .verbal {
-  width: 315px;
   border-radius: 12px;
   background: var(
     --green-95-white,
@@ -209,30 +185,13 @@ h2 {
   padding: 16px;
 }
 
-.verbal_left {
-  display: flex;
-  gap: 12px;
-}
-
 .text_verbal {
   color: var(--Green, #00bb8f);
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 500;
 }
 
-.verbal_right {
-  display: flex;
-  gap: 8px;
-
-  color: var(--Dark-Navy, #303b59);
-  font-family: Hanken Grotesk;
-  font-size: 16px;
-  font-weight: 700;
-}
-
 .visual {
-  width: 315px;
   border-radius: 12px;
   background: var(
     --blue-95-white,
@@ -249,26 +208,10 @@ h2 {
   padding: 16px;
 }
 
-.visual_left {
-  display: flex;
-  gap: 12px;
-}
-
 .text_visual {
   color: var(--Blue, #1125d6);
-  font-family: Hanken Grotesk;
   font-size: 16px;
   font-weight: 500;
-}
-
-.visual_right {
-  display: flex;
-  gap: 8px;
-
-  color: var(--Dark-Navy, #303b59);
-  font-family: Hanken Grotesk;
-  font-size: 16px;
-  font-weight: 700;
 }
 
 .continue {
@@ -278,7 +221,6 @@ h2 {
   background: var(--Dark-Navy, #303b59);
 
   color: var(--White, #fff);
-  font-family: Hanken Grotesk;
   font-size: 18px;
   font-weight: 700;
   border: none;
