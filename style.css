@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
   font-family: Hanken Grotesk;
@@ -13,7 +19,6 @@ body {
 
 .result {
   width: 375px;
-  height: 356px;
   border-radius: 0px 0px 32px 32px;
   background: var(
     --Gradient-1,
@@ -24,13 +29,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
 .your_result {
   color: var(--Light-Blue, #cac9ff);
   font-size: 18px;
   font-weight: 700;
+
+  margin: 24px 0;
 }
 
 .oval {
@@ -51,6 +57,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .some {
@@ -78,6 +85,8 @@ h2 {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+
+  margin: 8px 0 40px 0;
 }
 
 .summary {
@@ -99,6 +108,14 @@ h2 {
   gap: 16px;
 }
 
+.containers {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
 .left {
   display: flex;
   gap: 12px;
@@ -114,7 +131,6 @@ h2 {
 }
 
 .reaction {
-  border-radius: 12px;
   background: var(
     --red-95-white,
     linear-gradient(
@@ -124,10 +140,6 @@ h2 {
     ),
     #f55
   );
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
 }
 
 .lightning {
@@ -146,7 +158,6 @@ h2 {
 }
 
 .memory {
-  border-radius: 12px;
   background: var(
     --yellow-95-white,
     linear-gradient(
@@ -156,10 +167,6 @@ h2 {
     ),
     #ffb21e
   );
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
 }
 
 .text_memory {
@@ -169,7 +176,6 @@ h2 {
 }
 
 .verbal {
-  border-radius: 12px;
   background: var(
     --green-95-white,
     linear-gradient(
@@ -179,10 +185,6 @@ h2 {
     ),
     #00bb8f
   );
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
 }
 
 .text_verbal {
@@ -192,7 +194,6 @@ h2 {
 }
 
 .visual {
-  border-radius: 12px;
   background: var(
     --blue-95-white,
     linear-gradient(
@@ -202,10 +203,6 @@ h2 {
     ),
     #1125d6
   );
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
 }
 
 .text_visual {
@@ -235,12 +232,9 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 140px) {
   body {
-    height: 100vh;
     background: var(--Very-Light-blue, #ecf2ff);
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 
@@ -253,19 +247,17 @@ h2 {
   }
 
   .result {
-    height: 512px;
     border-radius: 32px;
   }
 
   .your_result {
     font-size: 24px;
-    margin: 36px 0;
+    margin: 38px 0 35px 0;
   }
 
   .oval {
     width: 200px;
     height: 200px;
-    margin-top: 35px;
     margin-bottom: 28px;
   }
 
@@ -288,7 +280,6 @@ h2 {
   }
 
   .summary {
-    height: 512px;
     margin-top: 44px;
   }
 
